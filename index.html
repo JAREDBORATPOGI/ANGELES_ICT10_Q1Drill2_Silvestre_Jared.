@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Numbers</title>
+
+    <!-- PyScript -->
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2025.2.4/core.css">
+
+    <script type="module"
+            src="https://pyscript.net/releases/2025.2.4/core.js">
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f2e9ff;
+        }
+
+        h1 {
+            color: purple;
+        }
+
+        input, select, button {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            background-color: purple;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Simple Calculator Using Forms and Numbers</h1>
+
+    <p>Enter two numbers and select the operation</p>
+
+    <label for="num1">First Number</label>
+    <input type="number" id="num1">
+
+    <br><br>
+
+    <label>Select Operation:</label>
+
+    <select id="operation">
+        <option value="+">Addition (+)</option>
+        <option value="-">Subtraction (-)</option>
+        <option value="x">Multiplication (x)</option>
+        <option value="/">Division (/)</option>
+    </select>
+
+    <br><br>
+
+    <label for="num2">Second Number</label>
+    <input type="number" id="num2">
+
+    <br><br>
+
+    <button py-click="compute">Compute</button>
+
+    <br><br>
+
+    <div id="result">
+        Result will be displayed here
+    </div>
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>
